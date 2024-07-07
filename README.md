@@ -1,7 +1,7 @@
 # Library Management System #
 
 ## Project Overview ##
-    This is a Smart LMS where books can be pre-booked for borrowing or get notified when the book is again available.
+- This is a Smart LMS where books can be pre-booked for borrowing or get notified when the book is again available.
 
 ## Tech Stack
 ### Frontend
