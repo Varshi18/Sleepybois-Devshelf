@@ -18,19 +18,19 @@
 
 ## Using the repository
 ### BackEnd 
-* `cd backend`
+#### `cd backend`
 - Go to the backend folder.
-* `npm i`
+#### `npm i`
 - Install the node modules.
-* `npm run dev`
+#### `npm run dev`
 - Starts the backend server.
 
 ### FrontEnd 
-* `cd frontend`
+#### `cd frontend`
 - Go to the frontend folder.
-* `npm i`
+#### `npm i`
 - Install the node modules.
-* `npm run dev`
+#### `npm run dev`
 - Runs the application in development mode.
 
 
