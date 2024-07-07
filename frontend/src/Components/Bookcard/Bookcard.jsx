@@ -1,20 +1,22 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Link } from 'react-router-dom';
-import './Bookcard.css';
+import "./Bookcard.css";
 
-const Bookcard = () => {
+function Bookcard({item}) {
+
     return (
-        <Link>
+            <>
             <div className="card">
-                <img src="https://th.bing.com/th/id/OIP.yG_pQCdDqgmJrpBWhYPKTQAAAA?rs=1&pid=ImgDetMain" className="card-img-top" alt="Book Image"/>
+                <div className="card-image-container">
+                    <img src={item.image} className="card-img-top" alt={item.title}/>
+                </div>
                 <div className="card-body">
-                    <h5 className="card-title">Book Name</h5>
-                    <p className="card-text">Brief Description</p>
-                    <a href="#" className="card-button">More</a>
+                    <h5 className="card-title">{item.title}</h5>
+                    <p className="card-text">{item.description}</p>
+                    <a className="card-button">More</a>
                 </div>
             </div>
-        </Link>
+            </>
     )
 }
 

@@ -5,29 +5,43 @@
     --body-color: hsl(0, 0%, 95%);
     --container-color: hsl(0, 0%, 100%);
 
-    --body-font: "Poppins", sans-serif;
-    --h2-font-size: 1.25rem;
-    --small-font-size: .813rem;
-  }
+    --h2-font-size: 50%;
+    --small-font-size: 70%;
+}
 
-  @media screen and (min-width: 991px) {
+@media screen and (min-width: 991px) {
     :root {
-      --h2-font-size: 1.5rem;
-      --small-font-size: .875rem;
+    --h2-font-size: 1rem;
+    --small-font-size: .875rem;
     }
-  }
+}
 
-.card{
+.card {
     position: relative;
     overflow: hidden;
-    width: 328px;
-}
-.card-img-top{
-    width: 328px;
+    width: 100%;
+    height: 100%;
+    border: none;
     border-radius: 1.5rem;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between;
 }
+
+.card-img-top {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem 1rem 0 0; 
+}
+.card-image-container {
+    height: 100%;
+    overflow: hidden;
+}
+
 .card-body{
-    width: 200px;
+    width: 80%;
     background-color: var(--container-color);
     padding: 1.5rem 2rem;
     box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
@@ -39,6 +53,7 @@
     margin-inline: auto;
     opacity: 0;
     transition: opacity 1s 1s;
+    flex-grow: 1;
 }
 .card-text{
     display: block;
