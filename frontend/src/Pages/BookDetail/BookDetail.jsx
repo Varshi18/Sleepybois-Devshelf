@@ -3,6 +3,7 @@ import './BookDetail.css';
 import axios from "axios";
 import { useParams } from 'react-router-dom';
 import Similar from '../../components/Similar/Similar';
+import Navbar from '../../components/Navbar/Navbar';
 
 const BookDetail = () => {
     const { _id } = useParams(); 
@@ -37,6 +38,8 @@ const BookDetail = () => {
     }
 
     return (
+        <>
+        <Navbar/>
         <div className="body">
             <div className="book-detail-container">
                 <div className='image'>
@@ -58,6 +61,7 @@ const BookDetail = () => {
                     <Similar department={book.department} currentBookId={book._id}/>
             </div>
         </div>
+        </>
     );
 }
 

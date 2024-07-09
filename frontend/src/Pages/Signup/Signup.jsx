@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import toast from "react-hot-toast";
+import Navbar from "../../components/Navbar/Navbar";
 
 function Signup() {
   const {
@@ -32,6 +33,7 @@ function Signup() {
   }
   return (
     <>
+    <Navbar/>
       <div className="bg-white">
         <div className="dark:bg-[#04060B] flex h-screen items-center justify-center">
           <div className="pl-3 md:scale-135 h-[450px] w-[450px]">

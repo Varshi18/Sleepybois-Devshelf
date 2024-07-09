@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Bookcard from '../../components/Bookcard/Bookcard';
 import './allbooks.css';
+import Navbar from '../../components/Navbar/Navbar';
 
 const AllBooks = () => {
   const [books, setBooks] = useState([]);
@@ -21,6 +22,7 @@ const AllBooks = () => {
 
   return (
     <>
+    <Navbar/>
     <div className='body'>
       <h1 className='title'>All Books</h1>
       <div className="grid-container">
