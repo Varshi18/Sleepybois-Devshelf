@@ -77,8 +77,10 @@ function Navbar() {
   const navItems = (
     <>
       <li>
+      <Link to="/">Home</Link>
       </li>
       <li>
+      <Link to="/allBooks">All Books</Link>
       </li>
       <li>
         <div
@@ -91,10 +93,13 @@ function Navbar() {
         {dropdownOpen && (
           <ul className="absolute mt-4 md:mt-5  md:-mx-14 p-2 shadow bg-base-100 dark:bg-slate-900 rounded-box w-52">
             <li>
+              <Link to="/computer">Computer Science</Link>
             </li>
             <li>
+              <Link to="/electrical">Electrical</Link>
             </li>
             <li>
+              <Link to="/mechanical">Mechanical</Link>
             </li>
           </ul>
         )}
@@ -140,9 +145,12 @@ function Navbar() {
                 {navItems}
               </ul>
             </div>
+            <Link
+              to="https://www.iitdh.ac.in/"
               className="text-2xl font-bold cursor-pointer"
             >
               IIT DHARWAD
+            </Link>
           </div>
           <div className="navbar-end space-x-3">
             <div className="navbar-center hidden lg:flex">

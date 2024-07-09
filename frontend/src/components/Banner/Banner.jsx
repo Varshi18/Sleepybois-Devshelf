@@ -1,5 +1,5 @@
 import React from 'react'
-import krdc from "../../../public/KRDC mask.png"
+import krdc from "/KRDC mask.png"
 
 function Banner() {
   return (

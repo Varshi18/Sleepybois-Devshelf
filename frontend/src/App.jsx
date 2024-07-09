@@ -6,7 +6,7 @@ import Signup from './Pages/Signup/Signup'
 import { Toaster } from 'react-hot-toast';
 import BookDetail from './Pages/BookDetail/BookDetail'
 import { useAuth } from './context/AuthProvider'
-import UserInfo from './Components/UserInfo/UserInfo'
+import UserInfo from './components/UserInfo/UserInfo'
 
 function App() {
 
@@ -21,6 +21,7 @@ function App() {
       <Route path="/allBooks" element={<AllBooks/>}/>
       <Route path="/signup" element={<Signup/>}/>
       <Route path="/User" element={authUser ? <UserInfo /> : <Navigate to= "/" />} />
+      <Route path="/bookDetail/:_id" element={<BookDetail/>}/>
     </Routes>
     <Toaster />
     </div>

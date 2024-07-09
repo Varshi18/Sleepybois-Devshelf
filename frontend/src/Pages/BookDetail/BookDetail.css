@@ -55,33 +55,6 @@
     background-color: lightblue;
 }
 
-.book-list {
-    display: flex;
-    overflow-x: auto;
-    padding: 10px;
-}
-
-.book-list::-webkit-scrollbar {
-    height: 10px;
-}
-
-.book-list::-webkit-scrollbar-thumb {
-    background-color: #ccc;
-    border-radius: 5px;
-}
-
-.book-list .book-card {
-    flex: 0 0 auto;
-    width: 200px;
-    margin-right: 10px;
-}
-
-.subhead {
-    margin-top: 20px;
-    font-size: 1.5rem;
-    align-items: center;
-}
-
 .image {
     width: 100%;
     height: auto;

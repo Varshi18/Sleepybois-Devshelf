@@ -1,40 +1,39 @@
 import React, { useState, useEffect } from 'react';
 import './BookDetail.css';
 import axios from "axios";
-import Recommended from '../../components/Recommended/Recommended';
 import { useParams } from 'react-router-dom';
 import Similar from '../../components/Similar/Similar';
 
 const BookDetail = () => {
-    const { _id } = useParams(); // Get the book ID from the URL
-    const [book, setBook] = useState(null); // Initialize book state
-    const [loading, setLoading] = useState(true); // Loading state
-    const [error, setError] = useState(null); // Error state
+    const { _id } = useParams(); 
+    const [book, setBook] = useState(null);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null); 
 
     useEffect(() => {
         const getBook = async () => {
             try {
-                console.log('Fetching book with ID:', _id); // Log the book ID
+                console.log('Fetching book with ID:', _id);
                 const response = await axios.get(`http://localhost:4001/book/${_id}`);
-                console.log('Book data:', response.data); // Log the book data
+                console.log('Book data:', response.data);
                 setBook(response.data);
             } catch (error) {
                 console.error('Error fetching book:', error);
                 setError('Failed to fetch book data. Please try again later.');
             } finally {
-                setLoading(false); // Set loading to false after fetching
+                setLoading(false); 
             }
         };
 
         getBook();
-    }, [_id]); // Fetch book data when the ID changes
+    }, [_id]); 
 
     if (loading) {
-        return <div>Loading...</div>; // Show loading indicator while fetching data
+        return <div>Loading...</div>; 
     }
 
     if (error) {
-        return <div>{error}</div>; // Show error message if there's an error
+        return <div>{error}</div>; 
     }
 
     return (
