@@ -20,7 +20,7 @@ function Signup() {
     .then((res)=>{
       console.log(res.data)
       if(res.data){
-        toast.success("SignUp Successful");
+        toast.success("Password set Successfully");
         localStorage.setItem("Users", JSON.stringify(res.data.user));
       }
     }).catch((error)=>{
