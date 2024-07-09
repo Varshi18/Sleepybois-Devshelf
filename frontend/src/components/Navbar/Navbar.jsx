@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Login from "../login/login";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const [theme, setTheme] = useState(
@@ -72,10 +73,10 @@ function Navbar() {
   const navItems = (
     <>
       <li>
-        <a href="/">Home</a>
+        <Link to="/">Home</Link>
       </li>
       <li>
-        <a href="/allBooks">All Books</a>
+        <Link to="/allBooks">All Books</Link>
       </li>
       <li>
         <div
@@ -88,13 +89,13 @@ function Navbar() {
         {dropdownOpen && (
           <ul className="absolute mt-4 md:mt-5  md:-mx-14 p-2 shadow bg-base-100 dark:bg-slate-900 rounded-box w-52">
             <li>
-              <a href="/computer">Computer Science</a>
+              <Link to="/computer">Computer Science</Link>
             </li>
             <li>
-              <a href="/electrical">Electrical</a>
+              <Link to="/electrical">Electrical</Link>
             </li>
             <li>
-              <a href="/mechanical">Mechanical</a>
+              <Link to="/mechanical">Mechanical</Link>
             </li>
           </ul>
         )}
@@ -140,12 +141,12 @@ function Navbar() {
                 {navItems}
               </ul>
             </div>
-            <a
-              href="https://www.iitdh.ac.in/"
+            <Link
+              to="https://www.iitdh.ac.in/"
               className="text-2xl font-bold cursor-pointer"
             >
               IIT DHARWAD
-            </a>
+            </Link>
           </div>
           <div className="navbar-end space-x-3">
             <div className="navbar-center hidden lg:flex">

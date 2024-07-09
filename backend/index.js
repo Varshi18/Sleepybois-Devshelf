@@ -1,7 +1,7 @@
 import express from "express"
 import dotenv from "dotenv"
 import mongoose from "mongoose"
-import cors from "cors"  //since frontend and backend are running on different servers, cors enables to access backend data in frontend
+import cors from "cors"
 
 
 import bookRoute from "./route/book.route.js"
@@ -14,7 +14,7 @@ app.use(express.json());
 
 dotenv.config();
 
-const PORT = process.env.PORT || 4000
+const PORT = process.env.PORT || 4001
 const URI = process.env.MongoDBURI;
 //connect to MongoDB
 try{
@@ -36,7 +36,3 @@ app.use("/user", userRoute)
 app.listen(PORT, () => {
   console.log(`Server is listening on port ${PORT}`)
 })
-
-
-//for new frontend start from 2:50:00 and install axios in that frontend
-//at 3:00:00 user login implementation where it take to all the books page only after login

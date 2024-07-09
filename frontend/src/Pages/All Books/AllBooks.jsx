@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Bookcard from '../../components/Bookcard/Bookcard';
-import Navbar from '../../components/Navbar/Navbar';
-import Footer from '../../components/Footer/Footer';
 import './allbooks.css';
 
 const AllBooks = () => {
@@ -23,7 +21,6 @@ const AllBooks = () => {
 
   return (
     <>
-    <Navbar/>
     <div className='body'>
       <h1 className='title'>All Books</h1>
       <div className="grid-container">
@@ -32,7 +29,6 @@ const AllBooks = () => {
         ))}
       </div>
     </div>
-    <Footer/>
     </>
   );
 };

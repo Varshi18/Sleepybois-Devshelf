@@ -13,7 +13,7 @@ function Bookcard({item}) {
                 <div className="card-body">
                     <h5 className="card-title">{item.title}</h5>
                     <p className="card-text">{item.description}</p>
-                    <a className="card-button">More</a>
+                    <a href={`/book-detail/${item._id}`} className="card-button">More</a>
                 </div>
             </div>
             </>
