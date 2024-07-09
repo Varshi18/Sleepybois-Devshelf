@@ -20,8 +20,8 @@ function App() {
       <Route path="/" element={<Home/>}/>
       <Route path="/allBooks" element={<AllBooks/>}/>
       <Route path="/signup" element={<Signup/>}/>
+      <Route path="/book-detail/:_id" element={<BookDetail/>}/>
       <Route path="/User" element={authUser ? <UserInfo /> : <Navigate to= "/" />} />
-      <Route path="/bookDetail/:_id" element={<BookDetail/>}/>
     </Routes>
     <Toaster />
     </div>

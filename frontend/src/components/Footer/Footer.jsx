@@ -8,7 +8,7 @@ const Footer = () => {
             <div className="container text-md-left">
                 <div className="row text-md-left">
                     <div className="col-md-3 col-lg-3 col-xl-4 mx-auto mt-3">
-                        <img src="../../public/IIT dh logo.png" className="footer-logo"/>
+                        <img src="/IIT dh logo.png" className="footer-logo"/>
                         <p className="font-weight-bold">INDIAN INSTITUTE OF TECHNOLOGY DHARWAD<br/>PERMANENT CAMPUS<br/>CHIKKAMALLIGAWAD<br/>DHARWAD - 580007<br/>KARNATAKA,<br/>BHARATA (INDIA)</p>
                     </div>
 					<div className="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
