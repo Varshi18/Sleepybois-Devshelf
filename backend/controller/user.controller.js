@@ -6,18 +6,19 @@ export const signup = async (req, res)=>{
         const {email, password} = req.body;
         const user =await User.findOne({email});
         if(user){
+            if (!user.password) {
+                // User exists but password is empty
+                const hashPassword = await bcryptjs.hash(password, 8);
+                user.password = hashPassword;
+                await user.save();
+                return res.status(200).json({ message: "Password set successfully", user: { _id: user._id, email: user.email } });
+            }
             return res.status(400).json({message:"User already exists"})
         }
-        const hashPassword =await bcryptjs.hash(password,8);
-        const createdUser = new User({
-            email: email,
-            password: hashPassword
-        })
-        await createdUser.save()
-        res.status(201).json({message:"User created successfully", user:{
-            _id:createdUser._id,
-            email:createdUser.email,
-        }})
+        else{
+            return res.status(401).json({message:"Not Authorized"})
+        }
+
     } catch (error) {
         console.log("error:",+ error.message)
         res.status(500).json({message:"Internal server error"})
