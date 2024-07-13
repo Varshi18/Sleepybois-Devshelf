@@ -1,9 +1,8 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import toast from "react-hot-toast";
-import Navbar from "../../components/Navbar/Navbar";
 
 function Signup() {
   const {
@@ -11,29 +10,35 @@ function Signup() {
     handleSubmit,
     formState: { errors },
   } = useForm();
+  const navigate = useNavigate();
 
   const onSubmit = async (data) => {
-    const userInfo ={
-      email:data.email,
-      password:data.password
-    }
-    await axios.post("http://localhost:4001/user/signup", userInfo)  //this stores that userinfo variable in our database
-    .then((res)=>{
-      console.log(res.data)
-      if(res.data){
-        toast.success("Password set Successfully");
-        localStorage.setItem("Users", JSON.stringify(res.data.user));
-      }
-    }).catch((error)=>{
-      if(error.response){
-        console.log(error);
-        toast.error("Error: "+ error.response.data.message);
-      }
-    })
-  }
+    const userInfo = {
+      email: data.email,
+      password: data.password,
+    };
+    await axios
+      .post("http://localhost:4001/user/signup", userInfo) //this stores that userinfo variable in our database
+      .then((res) => {
+        console.log(res.data);
+        if (res.data) {
+          toast.success("Password set Successfully");
+          localStorage.setItem("Users", JSON.stringify(res.data.user));
+          setTimeout(()=>{
+            navigate("/");
+          }, 500);
+          
+        }
+      })
+      .catch((error) => {
+        if (error.response) {
+          console.log(error);
+          toast.error("Error: " + error.response.data.message);
+        }
+      });
+  };
   return (
     <>
-    <Navbar/>
       <div className="bg-white">
         <div className="dark:bg-[#04060B] flex h-screen items-center justify-center">
           <div className="pl-3 md:scale-135 h-[450px] w-[450px]">

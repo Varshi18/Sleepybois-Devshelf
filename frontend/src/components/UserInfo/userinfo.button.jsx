@@ -9,18 +9,17 @@ function userinfoButton() {
     try {
       setAuthUser({
         ...authUser,
-        user:null
+        user: null,
       });
       localStorage.removeItem("Users");
       toast.success("Logout Successful");
-        
 
-          setTimeout(() => {
-            window.location.reload();
-          }, 2000);
+      setTimeout(() => {
+        window.location.reload();
+      }, 900);
     } catch (error) {
       toast.error("Error:" + error.message);
-      setTimeout(()=>{},2000);
+      setTimeout(() => {}, 1000);
     }
   };
 
@@ -31,6 +30,8 @@ function userinfoButton() {
     navigate("/User");
   };
 
+  const theme = localStorage.getItem("theme") || "light";
+  
   return (
     <div>
       {location.pathname === "/User" ? (
@@ -46,7 +47,11 @@ function userinfoButton() {
           onClick={handleLoginClick}
         >
           <img
-            src="../../../public/user image.jpg" // Ensure the correct path to the image
+            src={
+              theme === "dark"
+                ? "../../../public/user dark.png"
+                : "../../../public/user light.jpg"
+            }
             alt="User"
             className="w-10 h-10 rounded-full"
           />

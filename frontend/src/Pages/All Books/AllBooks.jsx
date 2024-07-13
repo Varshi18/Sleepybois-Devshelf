@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Bookcard from '../../components/Bookcard/Bookcard';
+import Bookcard from '../../Components/Bookcard/Bookcard';
+import Navbar from '../../Components/Navbar/Navbar';
+import Footer from '../../Components/Footer/Footer';
 import './allbooks.css';
-import Navbar from '../../components/Navbar/Navbar';
 
 const AllBooks = () => {
   const [books, setBooks] = useState([]);
@@ -31,6 +32,7 @@ const AllBooks = () => {
         ))}
       </div>
     </div>
+    <Footer/>
     </>
   );
 };

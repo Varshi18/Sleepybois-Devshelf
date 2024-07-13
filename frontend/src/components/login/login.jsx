@@ -16,8 +16,7 @@ function login() {
       email: data.email,
       password: data.password,
     };
-    await axios
-      .post("http://localhost:4001/user/login", userInfo) //this stores that userinfo variable in our database
+    await axios.post("http://localhost:4001/user/login", userInfo) //this stores that userinfo variable in our database
       .then((res) => {
         console.log(res.data);
         if (res.data) {
@@ -27,14 +26,14 @@ function login() {
           setTimeout(() => {    
             window.location.reload();
             localStorage.setItem("Users", JSON.stringify(res.data.user));
-          }, 2000);
+          }, 900);
         }
       })
       .catch((error) => {
         if (error.response) {
           console.log(error);
           toast.error("Error: " + error.response.data.message);
-          setTimeout(()=>{},2000);
+          setTimeout(()=>{},1000);
         }
       });
   };

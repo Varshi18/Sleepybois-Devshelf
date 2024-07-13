@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import Banner from '../../components/Banner/Banner'
-import Recommended from '../../components/Recommended/Recommended'
+import Navbar from '../../Components/Navbar/Navbar'
+import Banner from '../../Components/Banner/Banner'
+import Recommended from '../../Components/Recommended/Recommended'
+import Footer from '../../Components/Footer/Footer'
 import axios from "axios"
-import Navbar from '../../components/Navbar/Navbar'
 
 
 function Home() {
@@ -25,6 +26,7 @@ function Home() {
     <Navbar/>
     <Banner/>
     <Recommended/>
+    <Footer/>
     </>
   )
 }

@@ -212,7 +212,7 @@ function Navbar() {
             ) : (
               <div>
                 <a
-                  className="bg-[#000000] hover:bg-[#4A494B] hover:shadow-lg text-white px-3 py-2 rounded-md dark:bg-[#4A494B] dark:hover:bg-[#000000] cursor-pointer"
+                  className="bg-[#291334] hover:bg-[#642F7F] hover:shadow-lg text-white px-3 py-2 rounded-md dark:bg-[#4A494B] dark:hover:bg-[#06b6d4] cursor-pointer"
                   onClick={() =>
                     document.getElementById("my_modal_3").showModal()
                   }
