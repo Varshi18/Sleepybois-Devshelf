@@ -15,8 +15,8 @@
 - Tailwind CSS for minified styling.
 ### Backend
 - node.js and express.js for backend server.
-- axios to connect the backend with frontend securely
-- jsonwebtoken for secure authentication
+- axios to connect the backend with frontend securely.
+- jsonwebtoken for secure authentication.
 ### Database
 - MongoDB for storing data.
 
