@@ -2,8 +2,10 @@
 
 ## Project Overview ##
 - This is a Smart LMS where books borrowed and returned.
-- 
-
+- The user can login with their IITDH student email and borrow or return.
+- The admin can see the users, their borrowed books, and add, edit or remove a book.
+- In this website the user can access the whole database of books, and also search, filter and sort them.
+- The user gets the recommended books based on his branch
 ## Tech Stack
 ### Frontend
 - Developed using React and Vite for a fast and reactive user interface.
