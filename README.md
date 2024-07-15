@@ -2,7 +2,8 @@
 
 ## Project Overview ##
 - This is a Smart LMS where books borrowed and returned.
-- The user can login with their IITDH student email and borrow or return.
+- The user can login with their IITDH student email and borrow or return. THe user has to be a IITDH student to signup first to set the password then login with the set password.
+- The user wil get notified to return the book and also get a email about it.
 - The admin can see the users, their borrowed books, and add, edit or remove a book.
 - In this website the user can access the whole database of books, and also search, filter and sort them.
 - The user gets the recommended books based on his branch
