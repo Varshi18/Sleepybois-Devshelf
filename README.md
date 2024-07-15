@@ -48,7 +48,7 @@
   `npm run dev`
 ```
 - Runs the application in development mode.
-
+- If either of them is not run then the website won't load
 
 ## People Behind this
   * K Varshith - Frontend(React structure,CSS and Animation)
