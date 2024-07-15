@@ -12,6 +12,7 @@ const AddBookForm = ({ onBookAdded }) => {
   const [count, setCount] = useState(0);
   const [image, setImage] = useState("");
   const [fileData, setFileData] = useState(null); // State to store parsed file data
+  const [imageUrlPreview, setImageUrlPreview] = useState(''); // State for image preview
 
   const handleAddBook = async (e) => {
     e.preventDefault();
@@ -45,6 +46,7 @@ const AddBookForm = ({ onBookAdded }) => {
       setCount(0);
       setImage("");
       setFileData(null); // Clear file data
+      setImageUrlPreview(''); // Clear image preview
     } catch (error) {
       console.error("Error adding book", error);
       toast.error("Failed to add book. Please try again later.");
@@ -54,6 +56,7 @@ const AddBookForm = ({ onBookAdded }) => {
   const handleImageChange = (e) => {
     const url = e.target.value;
     setImage(url);
+    setImageUrlPreview(url); // Set image preview URL
   };
 
   const handleFileChange = (e) => {
@@ -162,6 +165,11 @@ const AddBookForm = ({ onBookAdded }) => {
             onChange={handleImageChange}
             className="form-input dark:text-[#000000] dark:bg-gray-300"
           />
+        </div>
+        <div className="form-group image-preview">
+          {imageUrlPreview && (
+            <img src={imageUrlPreview} alt="Image Preview" />
+          )}
         </div>
         <div className="form-group">
           <input
