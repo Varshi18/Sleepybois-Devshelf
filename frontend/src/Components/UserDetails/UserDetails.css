@@ -1,0 +1,40 @@
+.admin-user-details {
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.admin-user-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.user-table th,
+.user-table td {
+  padding: 8px;
+  border: 1px solid ;
+}
+
+
+
+@media (max-width: 768px) {
+  .admin-user-title {
+    font-size: 1.25rem;
+  }
+
+  .user-table th,
+  .user-table td {
+    padding: 4px;
+  }
+}

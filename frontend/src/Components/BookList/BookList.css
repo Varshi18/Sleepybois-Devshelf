@@ -1,0 +1,109 @@
+.book-list {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.book-list h3 {
+  font-size: 1.8rem;
+  color: #333333;
+  margin-bottom: 15px;
+}
+
+.book-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.book-list li {
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+  color: #666666;
+}
+
+.book-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.book-image {
+  width: 25%;
+  height: 40vh;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.book-details {
+  flex: 1;
+  margin-left: 20px;
+}
+
+.book-title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 10px;
+}
+
+.date-input label {
+  font-size: 1.2rem;
+  color: #333333;
+  margin-right: 10px;
+}
+
+.date-input input {
+  font-size: 1.2rem;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.calendar {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+.issue-date, .return-date {
+  font-size: 1.2rem;
+  color: #666666;
+  /*display: flex;
+  align-items: start;*/
+}
+
+
+.progress-bar-container {
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 10px;
+  height: 20px;
+  position: relative;
+}
+
+.progress-bar {
+  height: 100%;
+  border-radius: 5px 0 0 5px;
+}
+
+.progress-bar.overdue {
+  background-color: #ff6347; 
+}
+
+.progress-bar.invalid-date {
+  background-color: #d3d3d3; 
+}
+
+.progress-bar:not(.overdue):not(.invalid-date) {
+  background-color: #4caf50; 
+}
+
+.alert-message {
+  margin-top: 10px;
+  color: #ff6347;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
