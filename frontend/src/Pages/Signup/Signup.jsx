@@ -18,7 +18,7 @@ function Signup() {
       password: data.password,
     };
     await axios
-      .post("http://localhost:4001/user/signup", userInfo) //this stores that userinfo variable in our database
+      .post("http://localhost:4001/user/signup", userInfo) 
       .then((res) => {
         console.log(res.data);
         if (res.data) {
@@ -44,7 +44,7 @@ function Signup() {
           <div className="pl-3 md:scale-135 h-[450px] w-[450px]">
             <div className="modal-box dark:bg-gray-800">
               <form onSubmit={handleSubmit(onSubmit)} method="dialog">
-                {/* if there is a button in form, it will close the modal */}
+
                 <Link
                   to="/"
                   className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"

@@ -16,7 +16,7 @@ function login() {
       email: data.email,
       password: data.password,
     };
-    await axios.post("http://localhost:4001/user/login", userInfo) //this stores that userinfo variable in our database
+    await axios.post("http://localhost:4001/user/login", userInfo) 
       .then((res) => {
         console.log(res.data);
         if (res.data) {
@@ -43,7 +43,7 @@ function login() {
       <dialog id="my_modal_3" className="modal">
         <div className="modal-box dark:bg-slate-900 border-4 border-[#DBD0C7]/50 dark:border-cyan-500/50">
           <form onSubmit={handleSubmit(onSubmit)} method="dialog">
-            {/* if there is a button in form, it will close the modal */}
+            
             <Link
               to="/"
               className="btn btn-circle btn-ghost absolute right-2 top-2"

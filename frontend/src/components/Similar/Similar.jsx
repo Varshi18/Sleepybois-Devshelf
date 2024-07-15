@@ -4,7 +4,6 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import axios from "axios";
 import Bookcard from "../Bookcard/Bookcard";
-// import './Similar.css';
 
 function Similar({ department, currentBookId }) {
     const [books, setBook] = useState([]);

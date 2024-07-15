@@ -3,8 +3,9 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/AuthProvider";
 import toast from "react-hot-toast";
 
-function userinfoButton() {
+function UserInfoButton() {
   const [authUser, setAuthUser] = useAuth();
+  
   const handleLogoutClick = () => {
     try {
       setAuthUser({
@@ -19,7 +20,6 @@ function userinfoButton() {
       }, 900);
     } catch (error) {
       toast.error("Error:" + error.message);
-      setTimeout(() => {}, 1000);
     }
   };
 
@@ -27,14 +27,20 @@ function userinfoButton() {
   const location = useLocation();
 
   const handleLoginClick = () => {
-    navigate("/User");
+    if (authUser && authUser.role === 'admin') {
+      navigate("/admin");
+    } else {
+      navigate("/user");
+    }
   };
 
   const theme = localStorage.getItem("theme") || "light";
   
+  const isInUserOrAdminPath = location.pathname === "/user" || location.pathname === "/admin";
+
   return (
     <div>
-      {location.pathname === "/User" ? (
+      {authUser && isInUserOrAdminPath ? (
         <button
           className="flex items-center justify-center bg-red-500 text-white cursor-pointer px-3 py-2 rounded-md"
           onClick={handleLogoutClick}
@@ -49,8 +55,8 @@ function userinfoButton() {
           <img
             src={
               theme === "dark"
-                ? "../../../public/user dark.png"
-                : "../../../public/user light.jpg"
+                ? "/public/user dark.png"
+                : "/user light.jpg"
             }
             alt="User"
             className="w-10 h-10 rounded-full"
@@ -61,4 +67,4 @@ function userinfoButton() {
   );
 }
 
-export default userinfoButton;
+export default UserInfoButton;

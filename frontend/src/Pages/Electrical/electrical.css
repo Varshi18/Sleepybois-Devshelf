@@ -1,8 +1,7 @@
-.grid-container {
+.book-grid-container{
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Adjust based on your design */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     grid-gap: 20px;
-    gap: 1rem;
     padding: 20px;
 }
 .body{

@@ -1,5 +1,5 @@
 import express from "express"
-import { getBook } from "../controller/book.controller.js"
+import { bookInfo, getBook, searchBook } from "../controller/book.controller.js"
 import Book from "../model/bookModel.js";
 
 
@@ -20,5 +20,10 @@ router.get('/:_id', async (req, res) => {
         res.status(500).json({ error: 'An error occurred while fetching the book' });
     }
 });
+
+router.post("/bookInfo", bookInfo);
+
+router.get('/search/:keyword', searchBook);
+
 
 export default router;

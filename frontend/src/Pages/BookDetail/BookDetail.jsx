@@ -120,9 +120,9 @@ const BookDetail = () => {
           <div className="More-Books">
             <Similar department={book.department} currentBookId={book._id} />
           </div>
-          <Footer />
         </div>
       </div>
+      <Footer />
     </>
   );
 };

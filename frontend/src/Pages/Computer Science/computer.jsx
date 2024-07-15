@@ -28,8 +28,8 @@ function Computer() {
       <Navbar />
       <div className="flex flex-col min-h-screen bg-[#ffffff] dark:bg-[#04060B] dark:text-[#ffffff]">
         <div className="flex-grow max-w-screen-2xl container mx-auto md:px-20 px-6 py-32">
-          <h1 className="text-4xl font-semibold">Computer Science:</h1>
-          <div className="grid-container mt-6">
+          <h1 className="text-4xl font-semibold">Computer Science</h1>
+          <div className="book-grid-container">
             {books.map((item) => (
               <Bookcard item={item} key={item.id} />
             ))}

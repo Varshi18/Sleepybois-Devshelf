@@ -5,11 +5,32 @@ import Slider from "react-slick";
 import axios from "axios";
 import Bookcard from "../Bookcard/Bookcard";
 import './Recommended.css';
-
-
-const me = "Computer Science"
+import { useAuth } from '../../context/AuthProvider';
 
 function Recommended() {
+  const [authUser, setAuthUser] = useAuth();
+  let me ="Computer Science"
+      if(authUser){
+        const user = JSON.parse(localStorage.getItem("Users"));
+        const email = user.email;
+        const branch = email.slice(0, 2); 
+      if (branch==="cs" || branch==="CS") {
+        me="Computer Science";
+      } else if (branch==="EE" || branch==="ee") {
+        me="Electrical Engineering";
+      } else if (branch==="me" || branch==="ME") {
+        me="Mechanical Engineering";
+      }else if (branch==="ce" || branch==="CE") {
+        me="Civil Engineering";
+      }else if (branch==="CH" || branch==="ch") {
+        me="Chemical Engineering";
+      }else if (branch==="EP" || branch==="ep") {
+        me="Engineering Physics";
+      }else {
+        me="Computer Science";
+      }
+    }
+
   const[book, setBook] = useState([])
   useEffect(()=>{
       const getBook= async()=>{
