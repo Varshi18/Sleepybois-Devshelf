@@ -57,9 +57,9 @@
   * Prajwal Koppad - Backend
   * Suhas - Database Management
 ## For the judges to test:
-A sample user:
+- A sample user:
 email: ```EE23BT035@iitdh.ac.in```
 password ```HelloPrajwal```
-A sample admin:
+- A sample admin:
 email: ```kamatham.varshith@gmail.com```
 password ```HelloPrajwal```
