@@ -58,8 +58,8 @@
   * Suhas - Database Management
 ## For the judges to test:
 A sample user:
-email: ```bash EE23BT035@iitdh.ac.in```
-password ```bash HelloPrajwal```
+email: ```EE23BT035@iitdh.ac.in```
+password ```HelloPrajwal```
 A sample admin:
-email: ```bash kamatham.varshith@gmail.com```
-password ```bash HelloPrajwal```
+email: ```kamatham.varshith@gmail.com```
+password ```HelloPrajwal```
